@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "API_KEY": {
+      "type": "string"
+    },
+    "BOT_ID": {
+      "type": "string"
+    },
+    "LOG_CHANNEL": {
+      "type": "string"
+    },
+    "BOT_TOKEN": {
+      "type": "string"
+    },
+    "BOT_ROLE_ID": {
+      "type": "string"
+    },
+    "VALORANT_TOKEN": {
+      "type": "string"
+    },
+    "COOKIE_YOUTUBE": {
+      "type": "string"
+    },
+    "MONGO_URL": {
+      "type": "string"
+    },
+    "KUKI_API": {
+      "type": "object",
+      "properties": {
+        "BOT_KEY": {
+          "type": "string"
+        },
+        "CLIENT_NAME": {
+          "type": "string"
+        },
+        "COOKIE": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "BOT_KEY",
+        "CLIENT_NAME",
+        "COOKIE"
+      ]
+    },
+    "STATUSES": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "BOT_ID",
+    "LOG_CHANNEL",
+    "BOT_TOKEN",
+    "BOT_ROLE_ID",
+    "VALORANT_TOKEN",
+    "MONGO_URL",
+    "KUKI_API",
+    "STATUSES"
+  ]
+}
