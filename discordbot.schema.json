@@ -20,9 +20,6 @@
     "VALORANT_TOKEN": {
       "type": "string"
     },
-    "COOKIE_YOUTUBE": {
-      "type": "string"
-    },
     "MONGO_URL": {
       "type": "string"
     },
@@ -34,15 +31,11 @@
         },
         "CLIENT_NAME": {
           "type": "string"
-        },
-        "COOKIE": {
-          "type": "string"
         }
       },
       "required": [
         "BOT_KEY",
-        "CLIENT_NAME",
-        "COOKIE"
+        "CLIENT_NAME"
       ]
     },
     "STATUSES": {
