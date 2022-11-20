@@ -23,6 +23,9 @@
     "MONGO_URL": {
       "type": "string"
     },
+    "NSFW_JSON_URL": {
+      "type": "string"
+    },
     "KUKI_API": {
       "type": "object",
       "properties": {
