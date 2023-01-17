@@ -2,58 +2,105 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "API_KEY": {
-      "type": "string"
-    },
-    "BOT_ID": {
-      "type": "string"
-    },
-    "LOG_CHANNEL": {
-      "type": "string"
-    },
-    "BOT_TOKEN": {
-      "type": "string"
-    },
-    "BOT_ROLE_ID": {
-      "type": "string"
-    },
-    "VALORANT_TOKEN": {
-      "type": "string"
-    },
-    "MONGO_URL": {
-      "type": "string"
-    },
-    "NSFW_JSON_URL": {
-      "type": "string"
-    },
-    "KUKI_API": {
+    "BOT": {
       "type": "object",
       "properties": {
-        "BOT_KEY": {
+        "ID": {
           "type": "string"
         },
-        "CLIENT_NAME": {
+        "LOG_CHANNEL": {
           "type": "string"
+        },
+        "TOKEN": {
+          "type": "string"
+        },
+        "ROLE_ID": {
+          "type": "string"
+        },
+        "STATUSES": {
+          "type": "array",
+          "items": {}
         }
       },
       "required": [
-        "BOT_KEY",
-        "CLIENT_NAME"
+        "ID",
+        "LOG_CHANNEL",
+        "TOKEN",
+        "ROLE_ID"
       ]
     },
-    "STATUSES": {
-      "type": "array",
-      "items": {}
+    "API": {
+      "type": "object",
+      "properties": {
+        "MEW": {
+          "type": "object",
+          "properties": {
+            "API_KEY": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "API_KEY"
+          ]
+        },
+        "VALORANT": {
+          "type": "object",
+          "properties": {
+            "API_KEY": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "API_KEY"
+          ]
+        },
+        "KUKI": {
+          "type": "object",
+          "properties": {
+            "API_KEY": {
+              "type": "string"
+            },
+            "CLIENT_NAME": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "API_KEY",
+            "CLIENT_NAME"
+          ]
+        }
+      },
+      "required": [
+        "MEW",
+        "VALORANT",
+        "KUKI"
+      ]
+    },
+    "APP": {
+      "type": "object",
+      "properties": {
+        "DATABASE": {
+          "type": "object",
+          "properties": {
+            "MONGODB": {
+              "type": "string"
+            },
+            "NSFWDB": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "MONGODB"
+          ]
+        }
+      },
+      "required": [
+        "DATABASE"
+      ]
     }
   },
   "required": [
-    "BOT_ID",
-    "LOG_CHANNEL",
-    "BOT_TOKEN",
-    "BOT_ROLE_ID",
-    "VALORANT_TOKEN",
-    "MONGO_URL",
-    "KUKI_API",
-    "STATUSES"
+    "BOT",
+    "APP"
   ]
 }
